@@ -4,13 +4,12 @@ test('test', async ({ page }) => {
 
   // Go to https://qaauto.co.nz/billing-order-form/
 
-  await page.goto('https://qaauto.co.nz/billing-order-form/');
-  
+  await page.goto('https://qaauto.co.nz/billing-order-form/');  
 
   // Click input[name="wpforms\[form_locker_password\]"]
 
   await page.locator('input[name="wpforms\\[form_locker_password\\]"]').click();
-  await page.pause();
+//   await page.pause();
 
   // Fill input[name="wpforms\[form_locker_password\]"]
 
