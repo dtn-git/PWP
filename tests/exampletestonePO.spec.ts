@@ -28,23 +28,15 @@ const comment="test 555"
 // Go to https://qaauto.co.nz/billing-order-form/
 
 await login.goto();
-await login.validLogin("");
+await login.validLogin("Testing");
 //await billing.goto();
 // employee
 // /await billing.fillbilling(employee);
 await billing.fillbilling(firstname,lastname,email,phone,address1,address2,city,zipcode,comment);//Todo: Object 
-const path = "logs";  //Todo: move this to global 
-await page.screenshot({path:path + "\\" + Date.now() + ('screenshot.png')});
+//const path = "logs";  //Todo: move this to global 
+//await page.screenshot({path:path + "\\" + Date.now() + ('screenshot.png')});
 //const context = await browser.newContext({ recordVideo: { dir: 'videos/' } }); 
 
 });
 
-test('testvideo', async ({ page }) => {
-    const driver = await chromium.launch();
-    const page1 = await driver.newPage();
-    await page1.goto("http:\\www.google.com");
-    const context = await driver.newContext({ recordVideo: { dir: 'd:\\temp\\'} });
-    await context.close();
-    await driver.close();
-})
 
